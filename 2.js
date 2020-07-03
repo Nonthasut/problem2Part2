@@ -1,8 +1,10 @@
 function pow(a, n) {
-    let result = a
-    i=0
-    while(i<=n) {
-        result *= a
+    let sum =a
+    const exponent = a
+    i = 0
+    while (i < n-1) {
+        sum *= exponent
         i++
-    }return result
-}pow(5,3)
+    } 
+    return sum
+} pow(5, 3)
