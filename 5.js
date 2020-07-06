@@ -56,8 +56,5 @@ function changeStringtoThaiDate(date) {
         }
     }
 
-
-  
-
     return "วันที่ " + numOfdate + " " + arrMonth[numOfmonth - 1] + " พ.ศ. " + (Number(numOfyear) + 543)
-} changeStringtoThaiDate('0-04-1995')
+} changeStringtoThaiDate('31-12-1995')
