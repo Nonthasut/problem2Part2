@@ -1,76 +1,61 @@
-function squareRoot(number) {
-    let factorOf2 = []
-    let factorOf3 = []
-    let factorOf5 = []
-    let factorOf7 = []
-    let factorNotEratos =[]
-    let RootNumber = []
-    let RemainInRootNumber = []
 
-    while (number % 2 == 0 && number > 0) {
-        number /= 2
-        factorOf2.push(2)
-        if (factorOf2.length == 2) {
-           for(i=0;i<2;i++){
-            RootNumber.push(factorOf2.shift())
-           }
-        }
-    }
-    while (number % 3 == 0 && number > 0) {
-        number /= 3
-        factorOf3.push(3)
-        if(factorOf3.length==2){
-            for(i=0;i<2;i++){
-                RootNumber.push(factorOf3.shift())
-            }
-        }
+// Give up --*
 
-    }
-    while (number % 5 == 0 && number > 0) {
-        number /= 5
-        factorOf5.push(5)
-        if(factorOf5.length==2){
-            for(i=0;i<2;i++){
-                RootNumber.push(factorOf5.shift())
-            }
-        }
-    }
-    while (number % 7 == 0 && number > 0) {
-        number /= 7
-        factorOf7.push(7)
-        if(factorOf7.length==2){
-            for(i=0;i<2;i++){
-                RootNumber.push(factorOf7.shift())
-            }
-        }
-    }
-    if ((number % 2 != 0) && (number % 3 != 0) && (number % 5 != 0) && (number % 7 != 0) && (number > 1)) {
-     factorNotEratos.push(number)
-    }
+// function squareRoot(number) {
+//     let data = []
+//     let prepareData = []
+//     let canDivide = []
+//     let isPrimeCounter = 0
+//     let isPrime = []
+//     let factorOfNumber = []
+
+//     data.push(number)
+
+//     for (i = 0; i <= data.length - 1; i++) {
+//         for (j = 2; j <= data[data.length - 1]; j++) {
+//             prepareData.push([data[i], j])
+//         }
+//     }
+
+//     for (k = 0; k <= prepareData.length - 1; k++) {
+//         if (prepareData[k][0] % prepareData[k][1] === 0) {
+//             canDivide.push(prepareData[k][1])
+//         }
+//     }
+
+//     for (l = 0; l <= canDivide.length - 1; l++) {
+//         for (m = 1; m <= canDivide[canDivide.length - 1]; m++) {
+//             if (canDivide[l] % m === 0) {
+//                 isPrimeCounter++
+//             }
+//         }
+//         if (isPrimeCounter < 3) {
+//             isPrime.push(canDivide[l])
+//             isPrimeCounter = 0
+//         } else if (isPrimeCounter > 2) {
+//             isPrimeCounter = 0
+//         }
+//     }
 
 
-    // factorOf2 = factorOf2.slice(0,(factorOf2.length/2))
-    // factorOf3 = factorOf3.slice(0,(factorOf3.length/2))
-    // factorOf5 = factorOf5.slice(0,(factorOf5.length/2))
-    // factorOf7 = factorOf7.slice(0,(factorOf7.length/2))
+//     for (n = 0; n <= isPrime.length - 1; n++) {
+//         while (number % isPrime[n] == 0) {
+//             number / isPrime[n]
+//             factorOfNumber.push(isPrime[n])
+//         }
+//     }
+//     let index = 0
+//     while (number % isPrime[index] == 0 && isPrime.length != 0) {
+//         if (number % isPrime[index] == 0) {
+//             number / isPrime[index]
+//             factorOfNumber.push(isPrime[index])
+//         }else if(number % isPrime[index] != 0){
+//             isPrime.shift()
+//             index++
+//         }
+//     }
 
-
-    // RootNumber = RootNumber.reduce((result,factor)=>{return result*factor})
-    // RemainInRootNumber=factorNotEratos.concat(factorOf2).concat(factorOf3).concat(factorOf5).concat(factorOf7)
-    // RemainInRootNumber= RemainInRootNumber.reduce((result,factor)=>{return result*factor})
-    
-
-
-    console.log(factorOf2)
-    console.log(factorOf3)
-    console.log(factorOf5)
-    console.log(factorOf7)
-    console.log(factorNotEratos)
-    console.log(RootNumber)
-    console.log(RemainInRootNumber)
-
-    // return RootNumber+" root "+RemainInRootNumber}
-    
-    return RootNumber
-
-} squareRoot(121)
+//     console.log(factorOfNumber)
+//     console.log(isPrime)
+//     return canDivide
+// } squareRoot(100)

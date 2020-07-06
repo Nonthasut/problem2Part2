@@ -22,18 +22,18 @@ function numberOfSquare(height, width) {
 
     factorOfData.sort((a, b) => { return a - b })
 
-    for (m = 0; m <= factorOfData.length - 1; m++){
-        if(factorOfData[m]===factorOfData[m+(dataGDC.length-1)]){
-        widthOfSquare.push(factorOfData[m])
-        factorOfData.slice(0,dataGDC.length)
+    for (m = 0; m <= factorOfData.length - 1; m++) {
+        if (factorOfData[m] === factorOfData[m + (dataGDC.length - 1)]) {
+            widthOfSquare.push(factorOfData[m])
+            factorOfData.slice(0, dataGDC.length)
         }
     }
 
-    widthOfSquare.sort((a,b)=>{return a-b})
+    widthOfSquare.sort((a, b) => { return a - b })
 
-    let areaOfSquare = (widthOfSquare[widthOfSquare.length-1])**2
-    let allSizeOfArea = height*width
-    let quatityOfSquare = allSizeOfArea/areaOfSquare
-        
+    let areaOfSquare = (widthOfSquare[widthOfSquare.length - 1]) ** 2
+    let allSizeOfArea = height * width
+    let quatityOfSquare = allSizeOfArea / areaOfSquare
+
     return quatityOfSquare
-} numberOfSquare(2,8 )
+} numberOfSquare(15, 20)
